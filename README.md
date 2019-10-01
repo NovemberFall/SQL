@@ -28,3 +28,14 @@
 ---
 ![](img/2019-09-30-20-33-18.png)
 ---
+
+---
+- try to start mysql server and stop mysql server
+![](img/2019-09-30-20-51-24.png)
+---
+- now try to connect to database
+![](img/2019-09-30-20-53-46.png)
+---
+- enter space
+![](img/2019-09-30-20-56-11.png)
+
