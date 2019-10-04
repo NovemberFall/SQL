@@ -74,7 +74,6 @@ show tables;
 ![](img/2019-10-03-23-04-48.png)
 ---
 
----
 ### MySQL Warnings
 ---
 
@@ -89,7 +88,6 @@ show tables;
 ![](img/2019-10-04-09-11-36.png)
 ---
 
----
 - CODE: NULL and NOT NULL
 ```sql
 -- Try inserting a cat without an age:
@@ -105,4 +103,16 @@ INSERT INTO cats() VALUES();
 
 -- Define a new cats2 table with NOT NULL constraints:
 ```
+---
 
+### To Set Default Values
+![](img/2019-10-04-09-33-07.png)
+---
+![](img/2019-10-04-09-33-26.png)
+---
+
+- `INSERT INTO cats3(age) VALUES(13);`
+![](img/2019-10-04-09-37-34.png)
+---
+![](img/2019-10-04-09-38-24.png)
+- we have another unnamed cat
