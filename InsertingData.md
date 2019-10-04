@@ -236,4 +236,39 @@ INSERT INTO unique_cats2(name, age) VALUES('Skippy', 4);
 
 SELECT * FROM unique_cats2; 
 ```
+---
+### Table Constraints Exercise
+```sql
+USE test;
+CREATE TABLE employees( 
+    id INT AUTO_INCREMENT NOT NULL,
+    first_name VARCHAR(225) NOT NULL,
+    last_name VARCHAR(225) NOT NULL,
+    middle_name VARCHAR(225),
+    age INT NOT NULL,
+    current_status VARCHAR(225) NOT NULL DEFAULT 'employed',
+	PRIMARY KEY(id) 
+);
+```
+![](img/2019-10-04-15-43-10.png)
+---
+- `INSERT INTO employees(first_name, last_name, age) VALUES('Dora','Smith',58);`
+![](img/2019-10-04-15-46-24.png)
+---
+- Another way of defining a primary key:
+```sql
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
+    middle_name VARCHAR(255),
+    age INT NOT NULL,
+    current_status VARCHAR(255) NOT NULL DEFAULT 'employed'
+);
+
+-- A test INSERT:
+
+INSERT INTO employees(first_name, last_name, age) VALUES
+('Dora', 'Smith', 58);
+```
 
