@@ -76,6 +76,33 @@ show tables;
 
 ---
 ### MySQL Warnings
+---
+
+### Null Not Null
+
+- Null means the value is not known
+- Don't mean zero !
+![](img/2019-10-04-09-10-00.png)
+---
+
+- this time create a table with NOT NULL
+![](img/2019-10-04-09-11-36.png)
+---
+
+---
+- CODE: NULL and NOT NULL
+```sql
+-- Try inserting a cat without an age:
+
+INSERT INTO cats(name) VALUES('Alabama'); 
+
+SELECT * FROM cats; 
+
+-- Try inserting a nameless and ageless cat:
+
+INSERT INTO cats() VALUES(); 
 
 
+-- Define a new cats2 table with NOT NULL constraints:
+```
 
