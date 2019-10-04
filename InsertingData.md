@@ -116,3 +116,124 @@ INSERT INTO cats() VALUES();
 ---
 ![](img/2019-10-04-09-38-24.png)
 - we have another unnamed cat
+```sql
+CREATE TABLE cats3
+  (
+    name VARCHAR(20) DEFAULT 'no name provided',
+    age INT DEFAULT 99
+  );
+
+-- Notice the change when you describe the table:
+
+DESC cats3; 
+
+-- Insert a cat without a name:
+
+INSERT INTO cats3(age) VALUES(13); 
+
+-- Or a nameless, ageless cat:
+
+INSERT INTO cats3() VALUES(); 
+
+-- Combine NOT NULL and DEFAULT:
+CREATE TABLE cats4
+  (
+    name VARCHAR(20) NOT NULL DEFAULT 'unnamed',
+    age INT NOT NULL DEFAULT 99
+  );
+
+-- Notice The Difference:
+INSERT INTO cats() VALUES();
+ 
+SELECT * FROM cats;
+ 
+INSERT INTO cats3() VALUES();
+ 
+SELECT * FROM cats3;
+ 
+INSERT INTO cats3(name, age) VALUES('Montana', NULL);
+ 
+SELECT * FROM cats3;
+ 
+INSERT INTO cats4(name, age) VALUES('Cali', NULL);
+```
+
+---
+### A Primer On Primary keys
+![](img/2019-10-04-10-09-20.png)
+---
+- if we repeatly added 6 entities
+![](img/2019-10-04-10-10-11.png)
+---
+![](img/2019-10-04-10-10-39.png)
+- so how do we make each Unique?
+- Primary Key, A Unique Identifier
+![](img/2019-10-04-10-13-45.png)
+---
+- how do we know the primary key?
+![](img/2019-10-04-10-16-43.png)
+---
+- what if we add id still equals 1?
+![](img/2019-10-04-10-17-45.png)
+---
+- AUTO_INCREMENT
+```sql
+ CREATE TABLE unique_cats2( 
+   cat_id INT NOT NULL AUTO_INCREMENT, 
+   name VARCHAR(100), 
+   age INT, 
+   PRIMARY KEY (cat_id) 
+  );
+```
+![](img/2019-10-04-10-40-31.png)
+---
+![](img/2019-10-04-10-43-53.png)
+---
+![](img/2019-10-04-10-44-06.png)
+---
+
+- source codes
+```sql
+-- CODE: Primary Keys
+-- Define a table with a PRIMARY KEY constraint:
+
+CREATE TABLE unique_cats
+  (
+    cat_id INT NOT NULL,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+  );
+DESC unique_cats; 
+
+-- Insert some new cats:
+
+INSERT INTO unique_cats(cat_id, name, age) VALUES(1, 'Fred', 23);
+ 
+INSERT INTO unique_cats(cat_id, name, age) VALUES(2, 'Louise', 3);
+ 
+INSERT INTO unique_cats(cat_id, name, age) VALUES(1, 'James', 3);
+-- Notice what happens:
+
+SELECT * FROM unique_cats; 
+
+-- Adding in AUTO_INCREMENT:
+
+CREATE TABLE unique_cats2 (
+    cat_id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100),
+    age INT,
+    PRIMARY KEY (cat_id)
+);
+INSERT a couple new cats:
+
+INSERT INTO unique_cats2(name, age) VALUES('Skippy', 4);
+INSERT INTO unique_cats2(name, age) VALUES('Jiff', 3);
+INSERT INTO unique_cats2(name, age) VALUES('Jiff', 3);
+INSERT INTO unique_cats2(name, age) VALUES('Jiff', 3);
+INSERT INTO unique_cats2(name, age) VALUES('Skippy', 4);
+-- Notice the difference:
+
+SELECT * FROM unique_cats2; 
+```
+
