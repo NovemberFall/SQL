@@ -43,12 +43,39 @@ You can do it a couple of ways:
 - Escape the quotes with a backslash: 
 - `"This text has \"quotes\" in it"` or
 - `'This text has \'quotes\' in it'`
+---
 
+```sql
+CREATE TABLE people
+  (
+    first_name VARCHAR(20),
+    last_name VARCHAR(20),
+    age INT
+  );
+INSERT INTO people(first_name, last_name, age)
+VALUES ('Tina', 'Belcher', 13);
+INSERT INTO people(age, last_name, first_name)
+VALUES (42, 'Belcher', 'Bob');
+INSERT INTO people(first_name, last_name, age)
+VALUES('Linda', 'Belcher', 45),
+      ('Phillip', 'Frond', 38),
+      ('Calvin', 'Fischoeder', 70);
+```
 
+```sql
+DROP TABLE people; 
 
+SELECT * FROM people; 
 
-
+show tables; 
+```
+![](img/2019-10-03-23-04-26.png)
+---
+![](img/2019-10-03-23-04-48.png)
+---
 
 ---
+### MySQL Warnings
+
 
 
