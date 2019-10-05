@@ -161,7 +161,3 @@ DELETE FROM cats;
 SELECT * FROM cats;
 ```
 ---
-
-### CRUD Challenge
-![](img/2019-10-04-17-10-25.png)
----
