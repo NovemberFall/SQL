@@ -41,3 +41,149 @@ VALUES
 ---
 ![](img/2019-10-04-20-01-27.png)
 ---
+
+### working with CONCAT
+![](img/2019-10-04-21-51-55.png)
+---
+![](img/2019-10-04-21-55-54.png)
+---
+![](img/2019-10-04-21-57-13.png)
+---
+![](img/2019-10-04-22-00-07.png)
+---
+
+- CONCAT_WS, concat with separator
+- if we only use CONCAT:
+![](img/2019-10-04-22-07-18.png)
+---
+- use CONCAT_WS
+![](img/2019-10-04-22-08-43.png)
+---
+```sql
+SELECT author_fname, author_lname FROM books;
+ 
+-- CONCAT(x,y,z) // from slides
+ 
+-- CONCAT(column, anotherColumn) // from slides
+ 
+-- CONCAT(author_fname, author_lname)
+ 
+-- CONCAT(column, 'text', anotherColumn, 'more text')
+ 
+-- CONCAT(author_fname, ' ', author_lname)
+ 
+-- CONCAT(author_fname, author_lname); // invalid syntax
+ 
+SELECT CONCAT('Hello', 'World');
+ 
+SELECT CONCAT('Hello', '...', 'World');
+ 
+SELECT
+  CONCAT(author_fname, ' ', author_lname)
+FROM books;
+ 
+SELECT
+  CONCAT(author_fname, ' ', author_lname)
+  AS 'full name'
+FROM books;
+ 
+SELECT author_fname AS first, author_lname AS last, 
+  CONCAT(author_fname, ' ', author_lname) AS full
+FROM books;
+ 
+SELECT author_fname AS first, author_lname AS last, 
+  CONCAT(author_fname, ', ', author_lname) AS full
+FROM books;
+ 
+SELECT CONCAT(title, '-', author_fname, '-', author_lname) FROM books;
+ 
+SELECT 
+    CONCAT_WS(' - ', title, author_fname, author_lname) 
+FROM books;
+```
+---
+### Introduction SUBSTRING
+![](img/2019-10-04-22-13-59.png)
+---
+![](img/2019-10-04-22-16-14.png)
+---
+![](img/2019-10-04-22-17-01.png)
+---
+![](img/2019-10-04-22-20-46.png)
+---
+![](img/2019-10-04-22-21-25.png)
+---
+```sql
+SELECT SUBSTRING('Hello World', 1, 4);
+ 
+SELECT SUBSTRING('Hello World', 7);
+ 
+SELECT SUBSTRING('Hello World', 3, 8);
+ 
+SELECT SUBSTRING('Hello World', 3);
+ 
+SELECT SUBSTRING('Hello World', -3);
+ 
+SELECT SUBSTRING('Hello World', -7);
+ 
+SELECT title FROM books;
+ 
+SELECT SUBSTRING("Where I'm Calling From: Selected Stories", 1, 10);
+ 
+SELECT SUBSTRING(title, 1, 10) FROM books;
+ 
+SELECT SUBSTRING(title, 1, 10) AS 'short title' FROM books;
+ 
+SELECT SUBSTR(title, 1, 10) AS 'short title' FROM books;
+ 
+SELECT CONCAT
+    (
+        SUBSTRING(title, 1, 10),
+        '...'
+    )
+FROM books;
+ 
+-- source book_code.sql
+ 
+SELECT CONCAT
+    (
+        SUBSTRING(title, 1, 10),
+        '...'
+    ) AS 'short title'
+FROM books;
+```
+---
+
+### REPLACE
+![](img/2019-10-04-22-51-16.png)
+---
+```sql
+SELECT REPLACE('Hello World', 'Hell', '%$#@');
+ 
+SELECT REPLACE('Hello World', 'l', '7');
+ 
+SELECT REPLACE('Hello World', 'o', '0');
+ 
+SELECT REPLACE('HellO World', 'o', '*');
+ 
+SELECT
+  REPLACE('cheese bread coffee milk', ' ', ' and ');
+ 
+SELECT REPLACE(title, 'e ', '3') FROM books;
+ 
+-- SELECT
+--    CONCAT
+--    (
+--        SUBSTRING(title, 1, 10),
+--        '...'
+--    ) AS 'short title'
+-- FROM books;
+ 
+SELECT
+    SUBSTRING(REPLACE(title, 'e', '3'), 1, 10)
+FROM books;
+ 
+SELECT
+    SUBSTRING(REPLACE(title, 'e', '3'), 1, 10) AS 'weird string'
+FROM books;
+```
