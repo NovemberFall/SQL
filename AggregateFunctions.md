@@ -25,3 +25,19 @@
 ![](img/2019-10-07-20-32-34.png)
 ---
 ![](img/2019-10-07-20-33-11.png)
+
+```sql
+SELECT COUNT(*) FROM books;
+ 
+SELECT COUNT(author_fname) FROM books;
+ 
+SELECT COUNT(DISTINCT author_fname) FROM books;
+ 
+SELECT COUNT(DISTINCT author_lname) FROM books;
+ 
+SELECT COUNT(DISTINCT author_lname, author_fname) FROM books;
+ 
+SELECT title FROM books WHERE title LIKE '%the%';
+ 
+SELECT COUNT(*) FROM books WHERE title LIKE '%the%';
+```
