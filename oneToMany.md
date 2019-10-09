@@ -161,7 +161,18 @@ SELECT * FROM customers,orders WHERE id=customer_id;
 ![](img/2019-10-08-10-35-09.png)
 ---
 
-
+- Explicit INNER JOIN
+![](img/2019-10-09-12-30-20.png)
+---
+```sql
+SELECT *
+FROM orders
+JOIN customers
+    ON customers.id = orders.customer_id;
+```
+![](img/2019-10-09-12-40-45.png)
+---
+![](img/2019-10-09-12-41-22.png)
 
 
 
