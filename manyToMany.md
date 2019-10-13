@@ -5,6 +5,9 @@
 
 ### Create tables
 ```sql
+
+CREATE DATABASE tv_review_app;
+
 -- CREATING THE REVIEWERS TABLE
 
 
@@ -78,3 +81,11 @@ INSERT INTO reviews(series_id, reviewer_id, rating) VALUES
 
 ---
 ###  TV joins CHALLENGE 1
+```sql
+SELECT 
+    title, 
+    rating 
+FROM series
+JOIN reviews
+    ON series.id = reviews.series_id;
+```
