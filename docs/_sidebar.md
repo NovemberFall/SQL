@@ -9,5 +9,7 @@
     * [Aggregate Functions](ch1/agg.md)
     * [One To Many](ch1/one.md)
     * [Many To Many](ch1/many.md)
-  
+
 -----
+* [NoSQL](ch2/intro.md)
+    * [Redis Init](ch2/redis.md)
