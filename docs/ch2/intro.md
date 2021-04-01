@@ -71,7 +71,17 @@
 
 ## Where does NoSQL come from?
 
+---
 
+### Why are RDBMS not suitable for Big Data?
+
+- The context is Internet
+- RDBMSs assume that data are
+  - dense  [dens 稠密的
+  - structured data 结构化资料
+
+- Data coming from Internet are     
+  - Massive [ˈmæsɪv] and sparse  [spɑːrs] 庞大而稀疏
 
 
 

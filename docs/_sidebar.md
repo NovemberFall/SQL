@@ -12,5 +12,5 @@
 
 -----
 * [NoSQL](ch2/intro.md)
-    * [Introduction to NoSQL](ch2/intro1.md)
+    * [When to use NoSQL](ch2/use.md)
     * [Redis Init](ch2/redis.md)
