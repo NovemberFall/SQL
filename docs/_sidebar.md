@@ -12,6 +12,8 @@
 
 -----
 * [LeetCode](leet/intro.md)
+    * [595. Big Countries](leet/countries.md)
+    * [1757. Recyclable and Low Fat Products](leet/product.md)
 
 -----
 * [NoSQL](ch2/intro.md)
