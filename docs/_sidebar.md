@@ -1,6 +1,5 @@
 * [MySQL](ch1/intro.md)
     * [create user](ch1/user.md)
-    * [create database](ch1/db.md)
     * [Inserting Data](ch1/db1.md)
     * [CRUD commands](ch1/db2.md)
     * [CRUD Challenge](ch1/db3.md)
@@ -14,6 +13,7 @@
 * [LeetCode](leet/intro.md)
     * [595. Big Countries](leet/countries.md)
     * [1757. Recyclable and Low Fat Products](leet/product.md)
+    * [584. Find Customer Referee](leet/referee.md)
 
 -----
 * [NoSQL](ch2/intro.md)
