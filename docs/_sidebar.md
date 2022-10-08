@@ -11,9 +11,13 @@
     * [Many To Many](ch1/many.md)
 
 -----
+* [LeetCode](leet/intro.md)
+
+-----
 * [NoSQL](ch2/intro.md)
     * [When to use NoSQL](ch2/use.md)
     * [Big Table -- Google](ch2/big.md)
     * [NoSQL Database Type](ch2/types.md)
     * [Complexity](ch2/model.md)
     * [Redis Init](ch2/redis.md)
+
