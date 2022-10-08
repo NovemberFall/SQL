@@ -1,3 +1,9 @@
+* [LeetCode](leet/intro.md)
+    * [595. Big Countries](leet/countries.md)
+    * [1757. Recyclable and Low Fat Products](leet/product.md)
+    * [584. Find Customer Referee](leet/referee.md)
+
+-----
 * [MySQL](ch1/intro.md)
     * [create user](ch1/user.md)
     * [Inserting Data](ch1/db1.md)
@@ -8,12 +14,6 @@
     * [Aggregate Functions](ch1/agg.md)
     * [One To Many](ch1/one.md)
     * [Many To Many](ch1/many.md)
-
------
-* [LeetCode](leet/intro.md)
-    * [595. Big Countries](leet/countries.md)
-    * [1757. Recyclable and Low Fat Products](leet/product.md)
-    * [584. Find Customer Referee](leet/referee.md)
 
 -----
 * [NoSQL](ch2/intro.md)
