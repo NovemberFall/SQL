@@ -1,10 +1,3 @@
-* [LeetCode](leet/intro.md)
-    * [595. Big Countries](leet/countries.md)
-    * [1757. Recyclable and Low Fat Products](leet/product.md)
-    * [584. Find Customer Referee](leet/referee.md)
-    * [183. Customers Who Never Order](leet/order.md)
-
------
 * [MySQL](ch1/intro.md)
     * [create user](ch1/user.md)
     * [Inserting Data](ch1/db1.md)
