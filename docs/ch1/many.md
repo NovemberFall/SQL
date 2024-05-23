@@ -93,3 +93,52 @@ FROM series
 JOIN reviews
     ON series.id = reviews.series_id;
 ```
+
+---
+
+### 2nd Example:
+
+- A **many-to-many** relationship in a relational database means that multiple records in one table 
+  can be related to multiple records in another table, and vice versa. 
+  This type of relationship is typically implemented using a junction table (also known as a bridge table, join table, or associative entity) that breaks down the many-to-many relationship into two one-to-many relationships.
+
+
+- Example:
+  - Consider an example involving two tables: `students` and `courses`. A student can enroll in multiple `courses`, and a course can have multiple students enrolled. This is a classic **many-to-many** relationship.
+  
+
+```sql
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    student_name VARCHAR(100)
+    -- Other columns
+);
+
+CREATE TABLE courses (
+    course_id INT PRIMARY KEY,
+    course_name VARCHAR(100)
+    -- Other columns
+);
+
+CREATE TABLE enrollments (
+    enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT,
+    course_id INT,
+    FOREIGN KEY (student_id) REFERENCES students(student_id),
+    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+
+
+
+
+### Example Data
+
+INSERT INTO students (student_id, student_name) VALUES (1, 'Alice'), (2, 'Bob');
+INSERT INTO courses (course_id, course_name) VALUES (1, 'Math'), (2, 'Science');
+
+INSERT INTO enrollments (student_id, course_id) VALUES (1, 1), (1, 2), (2, 1);
+```
+
+- Student **Alice**(student_id = 1) is enrolled in both **Math** (course_id = 1) and **Science** (course_id = 2).
+- Student **Bob** (student_id = 2) is enrolled in **Math** (course_id = 1).
